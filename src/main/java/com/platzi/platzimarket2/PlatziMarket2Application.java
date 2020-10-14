@@ -1,5 +1,6 @@
 package com.platzi.platzimarket2;
 
+import com.platzi.platzimarket2.persistence.entity.Producto;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
