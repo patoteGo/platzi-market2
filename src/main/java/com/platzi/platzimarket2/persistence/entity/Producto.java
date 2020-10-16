@@ -18,12 +18,12 @@ public class Producto {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "id_producto")
-  private Long idProducto;
+  private Integer idProducto;
 
   private String nombre;
 
   @Column(name = "id_categoria")
-  private String idCategoria;
+  private Integer idCategoria;
 
   @Column(name = "codigo_barras")
   private String codigoBarras;
@@ -40,7 +40,7 @@ public class Producto {
   @JoinColumn(name = "id_categoria", insertable = false, updatable = false)
   private Categoria categoria;
 
-  public Producto(Long idProducto, String nombre, String idCategoria, String codigoBarras, Double precioVenta, Integer cantidadStock, Boolean estado, Categoria categoria) {
+  public Producto(Integer idProducto, String nombre, Integer  idCategoria, String codigoBarras, Double precioVenta, Integer cantidadStock, Boolean estado, Categoria categoria) {
     this.idProducto = idProducto;
     this.nombre = nombre;
     this.idCategoria = idCategoria;
@@ -54,11 +54,11 @@ public class Producto {
   public Producto() {
   }
 
-  public Long getIdProducto() {
+  public Integer getIdProducto() {
     return idProducto;
   }
 
-  public void setIdProducto(Long idProducto) {
+  public void setIdProducto(Integer idProducto) {
     this.idProducto = idProducto;
   }
 
@@ -70,11 +70,11 @@ public class Producto {
     this.nombre = nombre;
   }
 
-  public String getIdCategoria() {
+  public Integer  getIdCategoria() {
     return idCategoria;
   }
 
-  public void setIdCategoria(String idCategoria) {
+  public void setIdCategoria(Integer  idCategoria) {
     this.idCategoria = idCategoria;
   }
 

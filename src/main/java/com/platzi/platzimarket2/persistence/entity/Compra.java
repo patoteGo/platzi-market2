@@ -40,6 +40,6 @@ public class Compra {
     private Cliente cliente;
 
     @OneToMany(mappedBy = "producto")
-    private List<ComprasProducto> productoList;
+    private List<ComprasProducto> productos;
 
 }
