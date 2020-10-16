@@ -1,8 +1,5 @@
 package com.platzi.platzimarket2.persistence.entity;
 
-
-import lombok.Data;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -40,7 +37,15 @@ public class Producto {
   @JoinColumn(name = "id_categoria", insertable = false, updatable = false)
   private Categoria categoria;
 
-  public Producto(Integer idProducto, String nombre, Integer  idCategoria, String codigoBarras, Double precioVenta, Integer cantidadStock, Boolean estado, Categoria categoria) {
+  public Producto(
+      Integer idProducto,
+      String nombre,
+      Integer idCategoria,
+      String codigoBarras,
+      Double precioVenta,
+      Integer cantidadStock,
+      Boolean estado,
+      Categoria categoria) {
     this.idProducto = idProducto;
     this.nombre = nombre;
     this.idCategoria = idCategoria;
@@ -51,8 +56,7 @@ public class Producto {
     this.categoria = categoria;
   }
 
-  public Producto() {
-  }
+  public Producto() {}
 
   public Integer getIdProducto() {
     return idProducto;
@@ -70,11 +74,11 @@ public class Producto {
     this.nombre = nombre;
   }
 
-  public Integer  getIdCategoria() {
+  public Integer getIdCategoria() {
     return idCategoria;
   }
 
-  public void setIdCategoria(Integer  idCategoria) {
+  public void setIdCategoria(Integer idCategoria) {
     this.idCategoria = idCategoria;
   }
 
